@@ -13,7 +13,7 @@ namespace Lab06_OOP
         {
             Classes.Iguana steve = new Classes.Iguana() { ScaleColor = "Red", LaysEgg = false, Poisonous = true };
             Console.WriteLine("Welcome to the zoo! Meet steve the iguana");
-            Console.WriteLine($"Steve is dangerous, so be careful. He is a {steve.ScaleColor} Iguana");
+            Console.WriteLine($"Steve is a {steve.ScaleColor} scaled Iguana");
             Console.WriteLine("Iguanas can change color, run the changeColor method below");
             steve.ChangeColor();
             if (steve.Poisonous == true)

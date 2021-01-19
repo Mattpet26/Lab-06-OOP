@@ -33,17 +33,20 @@ namespace XUnitTestProject1
         [Fact]
         public void testDolphin()
         {
-            Dolphin franklin = new Dolphin() { Waterboi = true };
+            Dolphin franklin = new Dolphin() { Waterboi = true, shouldRide = "absolutely" };
             franklin.makeMilk();
             string expected = "Make that milk";
+            string expectedInterface = "absolutely";
 
             Assert.Equal(expected, franklin.makeMilk());
             Assert.True(franklin.Waterboi);
+            //test below checks for interface + ridable
+            Assert.Equal(expectedInterface, franklin.shouldRide);
         }
         [Fact]
         public void testBat()
         {
-            Bat skellaluna = new Bat() { Waterboi = false };
+            Bat skellaluna = new Bat() { Waterboi = false, canFly = true };
             skellaluna.SCREE();
             skellaluna.CleanFur();
             skellaluna.sleep();
@@ -53,6 +56,8 @@ namespace XUnitTestProject1
             Assert.Equal(expected, skellaluna.SCREE());
             Assert.False(skellaluna.Waterboi);
             Assert.Equal(expectedSleep, skellaluna.sleep());
+            //test below utilizes the interface flyboi
+            Assert.True(skellaluna.canFly);
         }
         [Fact]
         public void testLizard()
