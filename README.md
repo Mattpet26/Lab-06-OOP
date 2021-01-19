@@ -4,7 +4,7 @@
 **Version**: 1.0.0 
 
 ## Overview
-OOP principles. We created multiple classes to inherit methods+properties, then tested that the inheritence worked properly.
+OOP principles. We created multiple classes to inherit methods+properties, then tested that the inheritence worked properly. 
 
 ## Getting Started
 Clone the repository down to your local machine with: Git clone clonedRepoHere
