@@ -18,4 +18,5 @@ Enter VSC and view all of our beautiful tests!
 C# + VSC with some inheritance!
 
 ## Change Log
-01-18-2021 initial upload of the lab! Stay tuned for more.
+01/18/2021 - initial upload of the lab! Stay tuned for more.
+1/19/2021 - New repository created, prior repo had incorrect file structure which broke after cloning. Unsure why this break happened, but it seems to be resolved.
