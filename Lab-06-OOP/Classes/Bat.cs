@@ -1,14 +1,16 @@
-﻿using System;
+﻿using Lab_06_OOP.Interface;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Lab06_OOP.Classes
 {
-    public class Bat : Mammal
+    public class Bat : Mammal, FlyBoi
     {
         public bool drinksBlood {get;set;}
         public bool solitary { get; set; }
-
+        public bool canFly { get; set; }
+        public string name { get; set; }
 
         public string SCREE()
         {

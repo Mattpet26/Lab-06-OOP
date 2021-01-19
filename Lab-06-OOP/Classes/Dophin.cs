@@ -1,14 +1,16 @@
-﻿using System;
+﻿using Lab_06_OOP.Interface;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace Lab06_OOP.Classes
 {
-    public class Dolphin : Mammal
+    public class Dolphin : Mammal, Ridable
     {
         public bool doesTricks { get; set; }
         public bool isFree { get; set; }
-        
+        public bool canRide { get; set; }
+        public string shouldRide { get; set; }
 
         public void getHigh()
         {
