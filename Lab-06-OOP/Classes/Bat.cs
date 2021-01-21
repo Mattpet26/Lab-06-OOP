@@ -5,12 +5,14 @@ using System.Text;
 
 namespace Lab06_OOP.Classes
 {
-    public class Bat : Mammal, FlyBoi
+    public class Bat : Mammal, FlyBoi, Ridable
     {
         public bool drinksBlood {get;set;}
         public bool solitary { get; set; }
         public bool canFly { get; set; }
         public string name { get; set; }
+        public bool canRide { get; set; } = false;
+        public string shouldRide { get; set; } 
 
         public string SCREE()
         {
