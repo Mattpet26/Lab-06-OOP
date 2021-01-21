@@ -1,6 +1,7 @@
 using System;
 using Xunit;
 using Lab06_OOP.Classes;
+using Lab_06_OOP.Classes;
 
 namespace XUnitTestProject1
 {
@@ -25,10 +26,12 @@ namespace XUnitTestProject1
         [Fact]
         public void testSnake()
         {
-            Snake dangernoodle = new Snake() { Poisonous = true, Carnivore = "yes" };
-
+            Snake dangernoodle = new Snake() { Poisonous = true, Carnivore = "yes", shouldRide = "Heck yes"};
+            string expected = "Heck yes";
             Assert.Equal("yes", dangernoodle.Carnivore);
             Assert.True(dangernoodle.Poisonous);
+            Assert.True(dangernoodle.canRide);
+            Assert.Equal(expected, dangernoodle.shouldRide);
         }
         [Fact]
         public void testDolphin()
@@ -58,6 +61,8 @@ namespace XUnitTestProject1
             Assert.Equal(expectedSleep, skellaluna.sleep());
             //test below utilizes the interface flyboi
             Assert.True(skellaluna.canFly);
+            //tests other interface
+            Assert.False(skellaluna.canRide);
         }
         [Fact]
         public void testLizard()
@@ -69,6 +74,14 @@ namespace XUnitTestProject1
             Assert.False(josh.LaysEgg);
             Assert.True(josh.Poisonous);
         }
-
+        [Fact]
+        public void testMonkey()
+        {
+            Monkey josh = new Monkey() { canFly = false, shouldRide = "probably no", solvedProblem = true };
+            string expected = "probably no";
+            Assert.True(josh.solvedProblem);
+            Assert.False(josh.canFly);
+            Assert.Equal(expected, josh.shouldRide);
+        }
     }
 }
